@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 const prompt = `Please enter number of operation:
 1. Create new account

@@ -68,3 +68,11 @@ Go 中引入的处理方式为：defer, panic, recover
 
 ## forloop
 
+
+
+## 第三方包
+
+### [fake-useragent](https://github.com/EDDYCJY/fake-useragent) 
+模拟浏览器头（User-Agent）
+
+> go get github.com/EDDYCJY/fake-useragent

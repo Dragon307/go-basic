@@ -14,7 +14,7 @@ func main() {
 		go func(x int) {
 			cond.L.Lock() // 获取锁
 			defer cond.L.Unlock() // 释放锁
-			cond.Wait()
+			cond.Wait()// 等待通知，阻塞当前 goroutine
 			fmt.Println(x)
 			time.Sleep(time.Millisecond * 300)
 		}(i)

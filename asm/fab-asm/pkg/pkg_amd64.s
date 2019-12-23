@@ -17,3 +17,4 @@ TEXT ·Fab(SB),$0-16
 end:
     MOVQ $1, ret+8(FP)
     RET
+

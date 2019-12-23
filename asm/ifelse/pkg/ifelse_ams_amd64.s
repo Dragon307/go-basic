@@ -1,7 +1,7 @@
 
 #include "textflag.h"
 
-TEXT ·If(SB), NOSPLIT, $0-32
+TEXT ·AsmIf(SB), NOSPLIT, $0-32
     MOVQ ok+8*0(FP), CX // ok
     MOVQ a+8*1(FP), AX  // a
     MOVQ b+8*2(FP), BX  // b
@@ -13,3 +13,4 @@ TEXT ·If(SB), NOSPLIT, $0-32
 L:
     MOVQ BX, ret+24(FP) // return b
     RET
+

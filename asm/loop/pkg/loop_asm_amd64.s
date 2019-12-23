@@ -17,3 +17,4 @@ loop:
 end:
 	MOVQ BX, ret+24(FP)  // return v0
 	RET
+

@@ -1,0 +1,31 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <script src="wasm_exec.js"></script>
+    <script>
+        function fibonacci(n) {
+            if(n<2) {
+                return n
+            }
+            return fibonacci(n-2) + fibonacci(n-1)
+        }
+
+        console.time("start")
+
+        for(let i= 0;i<40;i++) {
+            console.log(fibonacci(i))
+        }
+
+        console.timeEnd("start")
+
+
+        const go = new Go();
+        WebAssembly.instantiateStreaming(fetch("main.wasm"), go.importObject).then((result) => {
+            go.run(result.instance);
+        });
+    </script>
+</head>
+<body>
+测试 wasm
+</body>
+</html>
